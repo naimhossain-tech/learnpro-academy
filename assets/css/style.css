@@ -347,3 +347,72 @@ footer {
   margin-top: 12px;
   font-weight: 600;
 }
+
+/* Main navigation and learning resource pages */
+.nav {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.resource-grid .feature h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.resource-grid .feature p,
+.guide-content p,
+.guide-content li {
+  color: var(--muted);
+}
+
+.guide-content ul,
+.guide-content ol,
+.resource-grid ol {
+  padding-left: 22px;
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
